@@ -1,0 +1,7 @@
+springMVC简单的demo，其中controller使用的是传统的方式（继承Controller接口）
+
+简单步骤：
+新建web工程、导入相关jar包、在web.xml中配置前端控制器，启动springmvc容器、创建springmvc.xml、创建controller、
+将controller配置到springmvc.xml中，创建jsp、启动tomcat
+
+一个Controller只能写一个方法，也就是一个请求方法一个Controller

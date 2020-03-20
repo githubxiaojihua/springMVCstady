@@ -1,0 +1,27 @@
+springmvc、spring集成mybatis
+1、新建web工程
+2、导入相关jar包
+3、创建配置文件：
+   1）SqlMapConfig.xml，这个是mybatis的主文件，但是这里可以为空因为与spring
+      集成了。
+   2）application-dao.xml，这个是dao层的配置文件主要包括数据库连接池、
+      SqlSessionFactory对象、mapper包扫描等。
+   3）application-service.xml，这个是service层的配置文件，主要是扫描service包@Service
+   4）application-transaction.xml这个是事物的配置文件
+   5）springmvc.xml，这个是表现层配置文件扫描@Controller，配置注解驱动和视图解析器。
+   6）web.xml文件，加载springmvc容器和spring容器，加载springmvc前端控制器。
+4、使用mybatis的逆向工程生成dao层
+5、创建service层
+6、创建controller层
+7、请求controller相关路径进行访问
+
+参数绑定：
+从request中直接取数据
+
+springmvc处理器形参中支持默认参数类型，springmvc可以自动识别绑定：
+HttpServletRequest,HttpServletResponse,HttpSession,Model/ModelMap
+以上这些参数可以直接在方法参数中写，springmvc会自动识别并传入。
+
+
+查询产品列表itemList.action
+修改产品itemEdit.action?id=1

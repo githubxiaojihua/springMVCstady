@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- springmvc 前端控制器-->
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath*:springmvc.xml</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <!-- 一般情况下springMVC配置为/
+         struts配置为/*
+         两者的区别在于前者不包括jsp资源，而后者包含jsp资源
+         这里暂时先写*.action表示我们只是拦截action后缀的资源
+    -->
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+</web-app>
