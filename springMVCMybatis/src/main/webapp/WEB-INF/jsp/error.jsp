@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <h1>操作成功</h1>
- <a href="${pageContext.request.contextPath}/user/logout.action">登出</a>
+ <h1>由于您的操作造成系统异常，错误信息如下，请转告开发工程师:<br/></h1>
+ ${errorMessage }
 </body>
 </html>

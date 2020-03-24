@@ -23,9 +23,16 @@
       <param-value>classpath:springmvc.xml</param-value>
     </init-param>
   </servlet>
-  <servlet-mapping>
+
+  <!--<servlet-mapping>
     <servlet-name>springmvc</servlet-name>
     <url-pattern>*.action</url-pattern>
+  </servlet-mapping>-->
+
+  <!-- Restful 风格的支持，过滤所有请求，然后再相关方法上做｛路径参数｝限定-->
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
   <!-- 解决post请求乱码问题

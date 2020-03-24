@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
- <h1>操作成功</h1>
- <a href="${pageContext.request.contextPath}/user/logout.action">登出</a>
+ <form action="${pageContext.request.contextPath }/user/login.action" method="post">
+  <table>
+   <tr><td>用户名</td><td><input name="userName"></td></tr>
+   <tr><td>密码</td><td><input name="password"></td></tr>
+  </table>
+  <button>登录</button>
+  </form>
 </body>
 </html>

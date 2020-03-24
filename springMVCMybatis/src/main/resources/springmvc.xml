@@ -36,5 +36,43 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+    <!-- 文件上传 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置上传文件的最大尺寸为5MB -->
+        <property name="maxUploadSize">
+            <value>5242880</value>
+        </property>
+    </bean>
+
+    <!-- 自定义异常处理器-->
+    <bean id="handlerExceptionResolver"
+          class="com.xiaojihua.exception.CustomExceptionResolver"/>
+
+
+    <!-- 配置springmvc静态资源访问
+         因为前端控制器的映射路径为/可以过滤除jsp之外的所有资源，当然
+         包括静态资源，这样前台页面控制台会报找不到相关资源，
+         需要将静态资源剥离出来不走springmvc前端控制器。
+    -->
+    <mvc:resources mapping="/js/**" location="/js/"/>
+
+    <!-- 配置springmvc拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.xiaojihua.interceptor.HandlerInterceptor1"/>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.xiaojihua.interceptor.HandlerInterceptor2"/>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.xiaojihua.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

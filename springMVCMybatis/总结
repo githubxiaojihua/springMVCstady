@@ -25,3 +25,13 @@ HttpServletRequest,HttpServletResponse,HttpSession,Model/ModelMap
 
 查询产品列表itemList.action
 修改产品itemEdit.action?id=1
+
+
+数组和list的参数绑定
+@RequestMapping的更多使用方式
+controller 返回重定向和请求转发
+上传图片（导入jar，配置转换器，配置form属性，配置tomcat虚拟图片目录（如何搭建看idea工具笔记），MultipartFile类的使用
+自定义异常处理
+json数据的接收和返回
+restful风格的支持
+拦截器，以及应用，登录验证，登出
