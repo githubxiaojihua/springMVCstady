@@ -10,6 +10,7 @@
         <module name="springBasicDemo" />
         <module name="springMvcAnnotationDemo" />
         <module name="springMVCMybatis" />
+        <module name="springMVCmybatisCRM" />
       </profile>
     </annotationProcessing>
   </component>

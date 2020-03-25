@@ -1,0 +1,27 @@
+springmvc spring mybatis bootstrap作为框架的CRM系统
+
+使用的是alibaba的druid数据库连接池
+
+springmvc 使用ajax往后台传输数据，同时往前台写入数据。
+    @RequestMapping("/edit")
+    @ResponseBody
+    public Customer edit(long id){
+        return customerService.findById(id);
+    }
+
+    long id 可以接收前台穿过来的data:{"id":id}, json对象，可以不用是json字符串'{"id":id}'
+
+
+    使用json格式向前台写入布尔值
+    @RequestMapping("/update")
+    @ResponseBody //作用 把对象转成json字符串，并且回写浏览器
+    public boolean update(Customer customer){
+        try {
+            customerService.update(customer);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+测试地址：http://localhost:8980/crm/list.action

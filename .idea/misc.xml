@@ -5,11 +5,12 @@
     <file type="web" url="file://$PROJECT_DIR$/../springMVCstady/springBasicDemo" />
     <file type="web" url="file://$PROJECT_DIR$/../springMVCstady/springMvcAnnotationDemo" />
     <file type="web" url="file://$PROJECT_DIR$/../springMVCstady/springMVCMybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/../springMVCstady/springMVCmybatisCRM" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/../springMVCstady/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
