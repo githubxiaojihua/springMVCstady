@@ -1,5 +1,6 @@
 package com.xiaojihua.pojo;
 
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 
 public class Items {
